@@ -12,6 +12,7 @@ connectDB();
 const app = express();
 
 app.use(bodyParser.json());
+app.use(express.static('public'))
 
 app.use('/users', userRoutes);
 app.use('/companies', companyRoutes);
